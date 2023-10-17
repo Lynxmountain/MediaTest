@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        Multimedia Activity
+    </title>
+    <link rel="icon" type="icon" href="Media/favicon1.ico">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Michroma">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+</head>
+
+<body>
+    <div class="topnavheader">
+        <div class="topnavheadertext" style="margin: 0%;">
+            <a href="./">Multimedia Activity</a>
+        </div>
+        <div class="topnavheaderimg" style="margin: 0%;">
+            <a width="auto" height="30px" href="https://lynxmountain.github.io/Home/" target="_blank">
+                <img width="auto" height="30px" class="RightAlign" src="Media/favicon1.ico" alt="<|>">
+            </a>
+        </div>
+    </div>
+    <div class="MainBody" style="margin: 0px; padding: 0px;">
+        <video src="Media/CreepyRabbitVideo.mp4" id="Video1" width="1000" height="auto" style="margin: 0px; padding: 0px; border-radius: 50px; border-color: white; border-width: 1px; border-style: solid;">
+            Your browser does not support the video tag.
+        </video>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Nzxsiq-7w0Y?si=y2sv3yYwA0P5gZHi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="ScrollButton">
+        <a id="topbutton" style="cursor: pointer;" onclick="MoveTop()">
+            <img class="ScrollButtonImage" src="Media/favicon3.ico" alt="TOP">
+        </a>
+    </div>
+    <div id="bottom" class="topnavfooter">
+        <button class="ReloadButton" onclick="reloadVideos()">
+            RELOAD VIDEOS
+        </button>
+    </div>
+    <script>
+        var Video1 = document.getElementById("Video1");
+
+        function MoveTop() {
+            scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function reloadVideos() {
+            Video1.load();
+        }
+        function playPauseToggle() {
+            if (Video1.paused) {
+                Video1.play();
+            } else {
+                Video1.pause();
+            }
+        }
+        function makeBig() {
+            Video1.width = 560;
+        }
+
+        function makeSmall() {
+            Video1.width = 320;
+        }
+
+        function makeNormal() {
+            Video1.width = 420;
+        }
+    </script>
+</body>
+
+</html>
