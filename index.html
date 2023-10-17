@@ -26,11 +26,46 @@
         </div>
     </div>
     <div class="MainBody" style="margin: 0px; padding: 0px;">
-        <video src="Media/CreepyRabbitVideo.mp4" id="Video1" width="1000" height="auto" style="margin: 0px; padding: 0px; border-radius: 50px; border-color: white; border-width: 1px; border-style: solid;">
+        <div class="VideoPanel">
+            <div class="ButtonSection">
+                <button class="VideoButton" onclick="skip(-5)">
+                    SKIP BACK
+                </button>
+                <button class="VideoButton" onclick="playPauseToggle()">
+                    PAUSE/PLAY
+                </button>
+                <button class="VideoButton" onclick="skip(+5)">
+                    SKIP FORWARD
+                </button>
+                <br>
+                <button class="VideoButton" onclick="makeBig()">
+                    ENLARGE VIDEO
+                </button>
+                <button class="VideoButton" onclick="makeNormal()">
+                    RESIZE VIDEO
+                </button>
+                <button class="VideoButton" onclick="makeSmall()">
+                    SHRINK VIDEO
+                </button>
+            </div>
+        </div>
+        <video class="VideoClass" src="Media/CreepyRabbitVideo.mp4" id="Video1" width="420" height="auto">
             Your browser does not support the video tag.
         </video>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/P_c8u6pk5sY?si=AIpv0MeoJIR4zucc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Nzxsiq-7w0Y?si=y2sv3yYwA0P5gZHi?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br>
+        <iframe class="VideoClass" width="560" height="315"
+            src="https://www.youtube.com/embed/P_c8u6pk5sY?si=AIpv0MeoJIR4zucc?controls=0" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+        <br>
+        <iframe class="VideoClass" width="560" height="315"
+            src="https://www.youtube.com/embed/Nzxsiq-7w0Y?si=y2sv3yYwA0P5gZHi?controls=0" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
     </div>
     <div class="ScrollButton">
         <a id="topbutton" style="cursor: pointer;" onclick="MoveTop()">
@@ -68,6 +103,10 @@
 
         function makeNormal() {
             Video1.width = 420;
+        }
+        function skip(value) {
+            var video = document.getElementById("Video1");
+            video.currentTime += value;
         }
     </script>
 </body>
