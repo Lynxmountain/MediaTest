@@ -47,6 +47,10 @@
                 <button class="VideoButton" onclick="makeSmall()">
                     SHRINK VIDEO
                 </button>
+                <br>
+                <button class="VideoButton" onclick="ToggleMute()">
+                    MUTE/UNMUTE
+                </button>
             </div>
         </div>
         <video class="VideoClass" src="Media/CreepyRabbitVideo.mp4" autoplay muted id="Video1" width="420" height="auto">
@@ -105,8 +109,10 @@
             Video1.width = 420;
         }
         function skip(value) {
-            var video = document.getElementById("Video1");
-            video.currentTime += value;
+            Video1.currentTime += value;
+        }
+        function ToggleMute() {
+            Video1.muted = !(Video1.muted)
         }
     </script>
 </body>
