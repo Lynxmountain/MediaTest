@@ -162,18 +162,7 @@ body {
     border-color: rgb(255, 255, 255);
     border-width: 2px;
     padding: 5px;
-    width: 500px;
-    background-color: rgb(0, 0, 75);
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-.ButtonSection2 {
-    border-radius: 10px;
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    border-width: 2px;
-    padding: 5px;
-    width: 500px;
+    width: 250px;
     background-color: rgb(0, 0, 75);
     margin-bottom: 5px;
     margin-top: 5px;
@@ -209,4 +198,7 @@ body {
     border-width: 2px;
     padding: 5px;
     background-color: rgb(0, 0, 75);
+}
+.VideoClass:active {
+    border-color: rgb(0, 200, 255);
 }
